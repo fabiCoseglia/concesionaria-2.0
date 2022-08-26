@@ -1,0 +1,13 @@
+[
+    {
+        "id":1,
+        "name":"fabi",
+        "lastname":"Coseglia",
+        "email":"fabicoseglia@gmail.com",
+        "password":"777",
+        "city":"san miguel",
+        "satate":"Buenos Aires",
+        "ccp": 1663,
+        "rol":"admin"
+    }
+]

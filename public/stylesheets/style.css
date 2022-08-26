@@ -1,0 +1,21 @@
+.carousel-inner{
+    height: 153px;
+}
+.btn-primary{
+   background-color: #212529;
+   border-color: #212529;
+}
+
+@media (min-width: 678px) {
+    .carousel-inner{
+        height: 396px;
+    }
+  }
+
+
+
+  @media (min-width: 1024px) {
+    .carousel-inner{
+        height: 506px;
+    }
+  }
