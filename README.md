@@ -6,7 +6,7 @@ Proyecto inspirado en mi primer desafío como estudiante, que consistía en util
 
 * forEach de listado de productos en el home
 * C.R.U.D de PRODUCTOS en la opcion ADMIN LIST
-* Registro funcional de usuarios
+* Registro de usuarios (login en proceso)
 * validaciones en el registro de usuarios
 * -- agregando nuevas funcionalidades --
 
