@@ -1,13 +1,33 @@
 [
-    {
-        "id":1,
-        "name":"fabi",
-        "lastname":"Coseglia",
-        "email":"fabicoseglia@gmail.com",
-        "password":"777",
-        "city":"san miguel",
-        "satate":"Buenos Aires",
-        "ccp": 1663,
-        "rol":"admin"
-    }
+   {
+      "id": 1,
+      "name": "fabi",
+      "lastname": "Coseglia",
+      "email": "fabicoseglia@gmail.com",
+      "password": "777",
+      "city": "san miguel",
+      "satate": "Buenos Aires",
+      "ccp": 1663,
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "name": "rudolf",
+      "lastname": "santa",
+      "email": "rudolf@gmail.com",
+      "password": "$2a$10$r70gLpGbWkWgXCjzOr7/NOGB5qIaFT/CXMLvaCLJqqBBp6JTE5FKa",
+      "image": "defaul-cars.png",
+      "rol": "user"
+   },
+   {
+      "id": 3,
+      "name": "ramita",
+      "lastname": "rama",
+      "email": "eamr@gmail.com",
+      "password": "$2a$10$7Q9whZyKKmyVgZYmIMQAlu3vrBjhcItqmtHkkT3BhMNKdJZGJkXjK",
+      "image": "defaul-cars.png",
+      "rol": "user",
+      "city": "bs as",
+      "ccp": 1666
+   }
 ]

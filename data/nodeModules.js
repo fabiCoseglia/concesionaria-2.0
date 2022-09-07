@@ -24,9 +24,12 @@ const storeUsers = (users) =>{
    fs.writeFileSync(path.join(__dirname,'usersDataBase.json'),JSON.stringify(users,null,3),'utf-8')
 };
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 module.exports = {
     loadProducts,
     storeProducts,
     loadUsers,
     storeUsers,
+    toThousand,
 }

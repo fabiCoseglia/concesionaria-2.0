@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<!-- HEAD -->
+<%- include('./partials/head') %>
+
+  <body>
+    <!--     HEADER-->
+    <%- include('./partials/header') %>
+
+     <section>
+        <h2 class="text-center p-3 color-black fw-bold mt-3">EDITAR PRODUCTO</h2>
+        <div class=" mt-4 mb-3 container-md mx-auto col-9  p-4 card-body card">
+            <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" >
+                <div class="col-md-6">
+                    
+                    <label for="name" class="form-label">Nombre del auto</label>
+                    <input type="text" name="name" class="form-control" id="name" value="<%= product.name %>">
+                </div>
+                <div class="col-md-6">
+                    <label for="model" class="form-label">Modelo</label>
+                    <input type="number" name="model" class="form-control" id="model" value="<%= product.model %>">
+                </div>
+                <div class="col-md-6">
+                    <label for="price" class="form-label">Precio</label>
+                    <input type="number" name="price" class="form-control" id="price" value="<%= product.price %>">
+                </div>
+
+                <div class="input-group mt-2">
+                    <span hidden class="input-group-text">Descripción del auto</span>
+                    <textarea class="form-control" name="description" id="description" style="resize: none;"><%= product.description %></textarea>
+                  </div>
+
+                
+                <div class="col-12 mt-2">
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile01">
+                      </div>
+                    
+                </div>
+                <figure class="figure mt-2">
+                    <img  width="200px" src="/images/<%= product.image %> " class="figure-img img-fluid rounded" alt="<%= product.image  %>">
+                    <figcaption class="figure-caption">se muestra la imagen ya cargada previa a la edicion.</figcaption>
+                  </figure> 
+                
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Actualizar info</button>
+                </div>
+                
+              </form>
+        </div>
+     </section>
+
+
+
+      <!-- FOOTER -->
+      <%- include('./partials/footer') %>
+        <!-- SCRIPTS -->
+        <%- include('./partials/scripts') %>
+
+  </body>
+
+</html>

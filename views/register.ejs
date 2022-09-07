@@ -10,29 +10,35 @@
      <section>
         <h2 class="text-center p-3 color-black fw-bold mt-3">REGISTRO DE USUARIO</h2>
         <div class=" mt-4 mb-3 container-md mx-auto col-9  p-4 card-body card">
-            <form class="row g-3">
+            <form action="/users/createUser" class="row g-3" method="POST" >
                 <div class="col-md-6">
                     
                     <label for="name" class="form-label">Nombre</label>
                     <input type="text" name="name" class="form-control" id="name">
+                    <p class="form__error__msg"><%= locals.errors && errors.name ? errors.name.msg : null%></p>
                   </div>
                   <div class="col-md-6">
                     <label for="lastname" class="form-label">Apellido</label>
                     <input type="text" name="lastname" class="form-control" id="lastname">
+                    <p class="form__error__msg"><%= locals.errors && errors.lastname ? errors.lastname.msg : null%></p>
                   </div>
                 <div class="col-md-6">
 
                   <label for="email" class="form-label">Email</label>
                   <input type="email" class="form-control" id="email" name="email">
+                  <p class="form__error__msg"><%= locals.errors && errors.email ? errors.email.msg : null%></p>
                 </div>
                 <div class="col-md-6">
                   <label for="password" class="form-label">Password</label>
                   <input type="password" class="form-control" name="password" id="password">
+                  <p class="form__error__msg"><%= locals.errors && errors.password ? errors.password.msg : null%></p>
                 </div>
                 
                 <div class="col-md-6">
                   <label for="city" class="form-label">Provincia</label>
                   <input type="text" name="city" class="form-control" id="city">
+                  <p class="form__error__msg"><%= locals.errors && errors.city ? errors.city.msg : null%></p>
+
                 </div>
                 <div class="col-md-4">
                   <label for="state" class="form-label">State</label>
@@ -44,6 +50,8 @@
                 <div class="col-md-2">
                   <label for="zip" class="form-label">CCP</label>
                   <input type="text" name="ccp" class="form-control" id="zip">
+                  <p class="form__error__msg"><%= locals.errors && errors.ccp ? errors.ccp.msg : null%></p>
+
                 </div>
                 <div class="col-12">
                     <div class="input-group mb-3">

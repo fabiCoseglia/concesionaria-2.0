@@ -6,6 +6,18 @@
    border-color: #212529;
 }
 
+.card-text-description{
+    height: 80px;
+}
+
+.badge{
+    font-size: 15px;
+}
+
+.form__error__msg{
+    color: red;
+}
+
 @media (min-width: 678px) {
     .carousel-inner{
         height: 396px;

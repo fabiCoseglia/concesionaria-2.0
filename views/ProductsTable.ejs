@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<!-- HEAD -->
+<%- include('./partials/head') %>
+
+  <body>
+    <!--     HEADER-->
+    <%- include('./partials/header') %>
+
+     <section class="container">
+        <h2 class="text-center mt-3"> Administrador de productos</h2>
+        <div class="row">
+            <div class="col">
+                <table class="mt-2 table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOMBRE</th>
+                            <th>MOD</th>
+                            <th>precio</th>
+                            <th class="text-center">opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% cars.forEach(({id,name,model,price}) => { %>
+                          <tr>
+                            <td><%= id %> </td>
+                            <td><%= name %> </td>
+                            <td><%= model %> </td>  
+                            <td>$<%= toThousand(price) %> </td>
+                            <td class="d-sm-flex justify-content-evenly ">
+                                <a href="/products/editProduct/<%= id %> " class="btn btn-info text-light ">Editar</a> 
+                                <!-- <a method="POST" href="/products/delete/?_method=DELETE " class="badge text-bg-danger nav-link">Eliminar</a>  -->
+                                <form action="/products/destroy/<%= id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="btn btn-danger mt-1 mt-sm-0">Borrar</button>
+                                </form>
+                                
+                            </td>
+                        </tr>
+                        <% }) %>
+                       
+                        
+                    </tbody>
+                    
+                </table>
+                <a href="/products/addProduct" class="btn btn-success"> Agregar Producto</a>
+            </div>
+        </div>
+        
+     </section>
+
+
+
+      <!-- FOOTER -->
+      <%- include('./partials/footer') %>
+        <!-- SCRIPTS -->
+        <%- include('./partials/scripts') %>
+
+  </body>
+
+</html>

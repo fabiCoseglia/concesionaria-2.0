@@ -4,8 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//requires for proyect//
+const methodOverride = require('method-override');
+const session = require('express-session');
+const localsUserCheck = require('./middlewares/localUserCheck');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var productsRouter = require('./routes/products');
 
 var app = express();
 
@@ -19,8 +25,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//setup fabi//
+app.use(methodOverride('_method'));
+app.use(session({
+  secret : 'keep learning :)',
+  resave :false,
+  saveUninitialized : true
+}));
+
+app.use(localsUserCheck);
+
+
+// ROOTS principales//
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/products',productsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
