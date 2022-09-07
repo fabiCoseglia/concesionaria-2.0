@@ -14,6 +14,7 @@ Proyecto inspirado en mi primer desafío como estudiante, que consistía en util
 
 #### Estructura de trabajo:
 
+* RESPONSIVE WEB DESIGNE
 * MVC -Modelo Vista Controlador-
 * express-generator
 * ejs + partials
