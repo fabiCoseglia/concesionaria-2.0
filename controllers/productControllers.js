@@ -11,6 +11,20 @@ module.exports = {
        });
     },
 
+    
+    detail:(req,res) =>{
+        const cars = loadProducts();
+        
+        const {id} = req.params;
+        const car = cars.find(car => car.id === +id);
+        
+        return res.render('detailProduct',{
+            title: 'Detalle del Producto',
+            car,
+            toThousand
+        }) 
+    },
+
     addProduct :(req,res) =>{
         return res.render('addProduct',{
             title: 'Crear Producto'
