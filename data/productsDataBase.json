@@ -30,8 +30,16 @@
       "id": 4,
       "name": "fiat 147",
       "description": "un auto de testing para ver si funciona add product",
-      "image": "default-cars.png",
-      "model": 1994,
-      "price": 456500
+      "model": "1994",
+      "price": 456500,
+      "image": "auto-1662851718480.jpg"
+   },
+   {
+      "id": 5,
+      "name": "Volkswagen",
+      "description": "auto con gran confort, excelente estetica y andar",
+      "image": "auto-1662853037282.jpg",
+      "model": 2016,
+      "price": 958000
    }
 ]

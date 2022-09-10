@@ -40,7 +40,8 @@ module.exports = {
             description : description.trim(),
             image : 'default-cars.png',
             model: +model,
-            price : +price    
+            price : +price ,
+            image: req.file ? req.file.filename : "default-cars.png"   
         };
 
         let carsModifed = [...cars,newCar];
@@ -79,7 +80,7 @@ module.exports = {
 			    price: +price,
 				description: description.trim(),
                 model: model.trim(),
-				image,
+				image: req.file ? req.file.filename : "default-cars.png"
 
 			}
 			}

@@ -10,7 +10,7 @@
      <section>
         <h2 class="text-center p-3 color-black fw-bold mt-3">EDITAR PRODUCTO</h2>
         <div class=" mt-4 mb-3 container-md mx-auto col-9  p-4 card-body card">
-            <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" >
+            <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
                 <div class="col-md-6">
                     
                     <label for="name" class="form-label">Nombre del auto</label>
@@ -33,12 +33,12 @@
                 
                 <div class="col-12 mt-2">
                     <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile01">
+                        <input type="file" class="form-control" id="inputGroupFile01" name="image">
                       </div>
                     
                 </div>
                 <figure class="figure mt-2">
-                    <img  width="200px" src="/images/<%= product.image %> " class="figure-img img-fluid rounded" alt="<%= product.image  %>">
+                    <img  width="200px" src="/images/productsImage/<%= product.image %> " class="figure-img img-fluid rounded" alt="<%= product.image  %>">
                     <figcaption class="figure-caption">se muestra la imagen ya cargada previa a la edicion.</figcaption>
                   </figure> 
                 
